@@ -1,154 +1,61 @@
-html{
-    font-size: 62.5%;
-}
 *{
     margin: 0; padding: 0; box-sizing: border-box;
 }
-main{
-    width: 80vw;
-    margin: 3rem auto;
+html{
+    font-size: 62.5%;
+}
+main{    
     display: grid;    
     font-family: 'Open Sans', sans-serif;
-    grid-template-rows: 50rem 10rem;
+    grid-gap: 3rem;
     grid-template-columns: repeat(2,55rem); 
-    grid-gap: 3rem;  
+    grid-template-rows: 50rem 10rem;      
+    margin: 3rem auto;
+    width: 80vw;
 }
-.left{
-    /*background-color: orange;*/
-}
-.right{
-    padding-top: 3rem;
-    /*background-color: aqua;*/
-    display: grid;
-    grid-template-rows:8rem 6rem 9rem repeat(3, 8rem);
-}
-.title{
-    font-family: 'Source Serif Pro', serif;
-    padding-top: 1rem;
-    font-size: 2rem;
-    /*background-color: tan;*/
-}
-.namee{
-    width: 45%;
-    height:6rem ;
-    font-size: 1.2rem;
-    /*background-color: green;*/
-}
-.rchild{
-    padding:.5rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
-    width: 80%;
-    /*background-color: greenyellow;*/
-}
-.rating{
-    padding-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    /*background-color:pink;*/
-}
-.review{
-    display: flex;
-    padding: .5rem 0;
-    font-size: 1.5rem;
-    font-weight: 300;
-}
-.money{
-    padding-top: 1rem;
-    padding-left: 1rem;
-    font-size: 2rem;
-   /* background-color: red;*/
-}
-.buttons{
-    padding-top: 1rem;
-    height: auto;
-    /*background-color:violet;*/
-    display: flex;
-}
-a{
-    text-decoration: none;
-    height: 3rem;
-    width:auto;
-    padding: 0.4rem 1rem;
-    font-size: 1.5rem;
-    margin-right: 2rem;
-    color: black;
-    justify-content: center;
-    border: .1rem solid black;
-}
-a:first-child{
-    background-color: black;
-    color: white;
-}
-.rating a{
-    text-decoration: underline;
-    color: black;
-    background-color: transparent;
-    border: none;
-    padding-left: 0;
-}
-.bottom{
-    /*background-color: rgb(126, 125, 125);*/
-    font-family: 'Open Sans', sans-serif;
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.child {
-    width: 25rem;
-}
-span{
-    font-size: 1.5rem;
-}
-.child p{
-    margin-left: 2rem;
-    font-size: 1.5rem;
-}
-
+/*Left Style*/
 .slider{
-    width: 55rem;
     height: 50rem;
     overflow: hidden;
+    width: 55rem;
 }
 .stable{
     position: absolute;
 }
-.navigate{
-    position: absolute;
+.navigate{    
     display: flex;
+    position: absolute;
     padding-left: 15rem;
     transform: translateY(-5rem);
 }
 .bar{
-    width: 3rem;
-    height: 3rem;    
-    margin: 1rem;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 2rem;    
-    color: rgb(136, 136, 136);
     background-color: aliceblue;
-    transition: 0.4s;    
+    border-radius: 50%;
+    color: rgb(136, 136, 136);
+    cursor: pointer;
+    font-size: 2rem;
+    height: 3rem;         
+    margin: 1rem;
+    text-align: center;   
+    transition: 0.4s; 
+    width: 3rem;   
 }
 input[name="r"] {
     position: absolute;
     visibility: hidden;
 }
-
-.slides{
-    width: 500%;
+.slides{    
+    display: flex;
     height: 40rem;
-    display: flex;    
+    width: 500%;        
 }
-.slide{
-    width: 20%;
+.slide{    
     transition: 0.6s;
+    width: 20%;
 }
 .slide img{
-    width: 100%;
     height: 100%;
+    width: 100%;    
 }
 
 #r1:checked ~ .s1{
@@ -167,22 +74,107 @@ input[name="r"] {
     margin-left: -80%;
 }
 .gallery{
-    width: 55rem;
-    height: 30rem;
     display: flex;
-    padding-top: 2rem;
     flex-wrap: wrap;
-    margin: auto;
+    height: 30rem;
     justify-content: space-between;
+    margin: auto;
+    padding-top: 2rem;
+    width: 55rem;    
 }
-.pic{
-    width: 18%;
+.pic{    
     height: 8rem;
+    width: 18%;
 }
 .gallery img{
-    width: 100%;
     height: 100%;
+    width: 100%;    
 }
+
+/*Right style*/
+.right{
+    /*background-color: aqua;*/
+    display: grid;
+    grid-template-rows:8rem 6rem 9rem repeat(3, 8rem);
+    padding-top: 3rem;
+}
+.title{   
+    /*background-color: tan;*/
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.namee{  
+    /*background-color: green;*/
+    font-size: 1.2rem;
+    height:6rem ;
+    width: 45%;
+}
+.discription{    
+    /*background-color: greenyellow;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    padding:.5rem;    
+    width: 75%;
+}
+.review{
+    display: flex;
+    font-size: 1.5rem;
+    padding: .5rem 0;    
+}
+.money{   
+   /* background-color: red;*/
+   font-size: 2rem;
+   padding-left: 1rem;
+   padding-top: 1rem;
+}
+.buttons{   
+    /*background-color:violet;*/
+    display: flex;
+    padding-top: 1rem;
+}
+.buttons a{    
+    border: .1rem solid black;
+    color: black;
+    font-size: 1.5rem;
+    height: 3rem;
+    justify-content: center;
+    margin-right: 2rem;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    width:auto;
+}
+a:first-child{
+    background-color: black;
+    color: white;
+}
+.rating a{
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding-left: 0;
+    text-decoration: underline;
+}
+/*bottom Style*/
+.bottom{
+    align-items: center;
+    /*background-color: rgb(126, 125, 125);*/
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    grid-column: 1/-1;   
+    justify-content: space-around;    
+}
+.child {
+    width: 25rem;
+}
+.child p{
+    font-size: 1.5rem;
+    margin-left: 2rem;    
+}
+span{
+    font-size: 1.5rem;
+}
+
 @media (max-width:1000px){    
     main{
         grid-template-columns: repeat(1,1fr);  
@@ -192,10 +184,10 @@ input[name="r"] {
     }
     .bottom{
         display: grid;
-        justify-content: left;
-        padding-left: 15rem;
         font-size: 2rem;
         grid-template-rows: repeat(3,10rem);
+        justify-content: left;
+        padding-left: 15rem;    
     }
     .right{
         padding-left: 15rem;
@@ -209,14 +201,11 @@ input[name="r"] {
 }
 @media (max-width:768px){
     html{
-        font-size: 30%;
-        
+        font-size: 30%;        
         transition: all 0.4s; 
     }
     .right{
-        width: 100%;
-        
+        width: 100%;        
         transition: all 0.4s; 
-    }
-    
+    }    
 }

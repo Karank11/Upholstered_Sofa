@@ -1,10 +1,10 @@
 *{
     margin: 0; padding: 0; box-sizing: border-box;
-}
-html{
+  }
+  html{
     font-size: 62.5%;
-}
-main{    
+  }
+  main{    
     display: grid;    
     font-family: 'Open Sans', sans-serif;
     grid-gap: 3rem;
@@ -12,128 +12,112 @@ main{
     grid-template-rows: 50rem 10rem;      
     margin: 3rem auto;
     width: 80vw;
-}
-/*Left Style*/
-.slider{
-    height: 50rem;
+  }
+  /*Left Style*/
+  .left{
+    height: 55rem;
     overflow: hidden;
     width: 55rem;
-}
-.stable{
-    position: absolute;
-}
-.navigate{    
-    display: flex;
-    position: absolute;
-    padding-left: 15rem;
-    transform: translateY(-5rem);
-}
-.bar{
-    background-color: aliceblue;
-    border-radius: 50%;
-    color: rgb(136, 136, 136);
-    cursor: pointer;
-    font-size: 2rem;
-    height: 3rem;         
-    margin: 1rem;
-    text-align: center;   
-    transition: 0.4s; 
-    width: 3rem;   
-}
-input[name="r"] {
-    position: absolute;
-    visibility: hidden;
-}
-.slides{    
+  }
+  .slides{    
     display: flex;
     height: 40rem;
     width: 500%;        
-}
-.slide{    
-    transition: 0.6s;
+  }
+  .slide{    
     width: 20%;
-}
-.slide img{
+  }
+  .slide img{
     height: 100%;
     width: 100%;    
-}
-
-#r1:checked ~ .s1{
-    margin-left: 0;
-}
-#r2:checked ~ .s1{
-    margin-left: -20%;
-}
-#r3:checked ~ .s1{
-    margin-left: -40%;
-}
-#r4:checked ~ .s1{
-    margin-left: -60%;
-}
-#r5:checked ~ .s1{
-    margin-left: -80%;
-}
-.gallery{
+  }
+  .navigate{    
+    display: flex;
+    transform: translateY(-25rem);
+    justify-content: space-between;
+  }
+  .prev ,.next{
+    font-size: 3rem;
+    width: 4rem;
+    padding-left: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    user-select: none;
+  }
+  .prev:hover,
+  .next:hover {
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .gallery{
     display: flex;
     flex-wrap: wrap;
     height: 30rem;
     justify-content: space-between;
     margin: auto;
-    padding-top: 2rem;
     width: 55rem;    
-}
-.pic{    
+  }
+  .pic{    
     height: 8rem;
     width: 18%;
-}
-.gallery img{
+  }
+  .gallery img{
     height: 100%;
     width: 100%;    
-}
-
-/*Right style*/
-.right{
+  }
+  .demo{
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  .active,
+  .demo:hover { 
+    opacity: 1;
+  }
+  /*Right style*/
+  .right{
     /*background-color: aqua;*/
     display: grid;
     grid-template-rows:8rem 6rem 9rem repeat(3, 8rem);
     padding-top: 3rem;
-}
-.title{   
+  }
+  .title{   
     /*background-color: tan;*/
     font-family: 'Source Serif Pro', serif;
     font-size: 2rem;
     padding-top: 1rem;
-}
-.namee{  
+  }
+  .namee{  
     /*background-color: green;*/
     font-size: 1.2rem;
     height:6rem ;
     width: 45%;
-}
-.discription{    
+  }
+  .discription{    
     /*background-color: greenyellow;*/
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     padding:.5rem;    
     width: 75%;
-}
-.review{
+  }
+  .review{
     display: flex;
     font-size: 1.5rem;
     padding: .5rem 0;    
-}
-.money{   
+  }
+  .money{   
    /* background-color: red;*/
    font-size: 2rem;
    padding-left: 1rem;
    padding-top: 1rem;
-}
-.buttons{   
+  }
+  .buttons{   
     /*background-color:violet;*/
     display: flex;
     padding-top: 1rem;
-}
-.buttons a{    
+  }
+  .buttons a{    
     border: .1rem solid black;
     color: black;
     font-size: 1.5rem;
@@ -143,39 +127,39 @@ input[name="r"] {
     padding: 0.4rem 1rem;
     text-decoration: none;
     width:auto;
-}
-a:first-child{
+  }
+  .buttons a:first-child{
     background-color: black;
     color: white;
-}
-.rating a{
+  }
+  .rating a{
     background-color: transparent;
     border: none;
     color: black;
     padding-left: 0;
     text-decoration: underline;
-}
-/*bottom Style*/
-.bottom{
+  }
+  /*bottom Style*/
+  .bottom{
     align-items: center;
     /*background-color: rgb(126, 125, 125);*/
     display: flex;
     font-family: 'Open Sans', sans-serif;
     grid-column: 1/-1;   
     justify-content: space-around;    
-}
-.child {
+  }
+  .child {
     width: 25rem;
-}
-.child p{
+  }
+  .child p{
     font-size: 1.5rem;
     margin-left: 2rem;    
-}
-span{
+  }
+  span{
     font-size: 1.5rem;
-}
-
-@media (max-width:1000px){    
+  }
+  
+  @media (max-width:1000px){    
     main{
         grid-template-columns: repeat(1,1fr);  
         grid-template-rows: 55rem 55rem 30rem;
@@ -194,12 +178,15 @@ span{
     }
     .slider{
         width: 80%;
+    }    
+    .discription{
+        width: 40%;
     }
     .gallery{
         width: 80%;
     }
-}
-@media (max-width:768px){
+  }
+  @media (max-width:768px){
     html{
         font-size: 30%;        
         transition: all 0.4s; 
@@ -208,4 +195,4 @@ span{
         width: 100%;        
         transition: all 0.4s; 
     }    
-}
+  }

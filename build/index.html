@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Upholstered Sofa</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./index.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">        
@@ -13,15 +14,9 @@
     <body>
         <main>
             <!--Left side-->
-            <div class="left"> 
-                <div class="slider stable">                          
-                    <div class="slides">
-                        <input type="radio" name="r" id="r1" >
-                        <input type="radio" name="r" id="r2">  
-                        <input type="radio" name="r" id="r3">
-                        <input type="radio" name="r" id="r4">
-                        <input type="radio" name="r" id="r5">                
-                        <div class="slide s1">
+            <div class="left">                          
+                    <div class="slides">                
+                        <div class="slide">
                             <img src="./img/Lsofa.jpg" style="width: 100%;">
                         </div>
                         <div class="slide">
@@ -39,32 +34,27 @@
                     </div>
 
                     <div class="navigate">
-                        <label for="r1" class="bar"><p>1</p></label>
-                        <label for="r2" class="bar"><p>2</p></label>
-                        <label for="r3" class="bar"><p>3</p></label>
-                        <label for="r4" class="bar"><p>4</p></label>
-                        <label for="r5" class="bar"><p>5</p></label>
+                        <a class="prev" onclick="Change(-1)">❮</a>
+                        <a class="next" onclick="Change(1)">❯</a>                        
                     </div>
 
                     <div class="gallery">
                         <div class="pic">
-                            <img src="./img/Lsofa.jpg">
+                            <img src="./img/Lsofa.jpg" class="demo" onclick="Current(1)">
                         </div>
                         <div class="pic">
-                            <img src="./img/cornersofa.jpg">
+                            <img src="./img/cornersofa.jpg" class="demo" onclick="Current(2)">
                         </div>
                         <div class="pic">
-                            <img src="./img/livingsofa.jpg">
+                            <img src="./img/livingsofa.jpg" class="demo" onclick="Current(3)">
                         </div>
                         <div class="pic">                        
-                            <img src="./img/3seatsofa.jpg">
+                            <img src="./img/3seatsofa.jpg" class="demo" onclick="Current(4)">
                         </div>
                         <div class="pic">
-                            <img src="./img/velvetsofa.jpg">
+                            <img src="./img/velvetsofa.jpg" class="demo" onclick="Current(5)">
                         </div>                    
-                    </div>
-
-                </div>                             
+                    </div>                           
             </div>
 
             <!--Right Side-->
@@ -126,5 +116,9 @@
             </div>
 
         </main>
+
+
+        <script>
+        </script>
     </body>
 </html>

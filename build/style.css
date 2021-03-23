@@ -33,23 +33,23 @@
   }
   .navigate{    
     display: flex;
-    transform: translateY(-25rem);
     justify-content: space-between;
+    transform: translateY(-25rem);    
   }
-  .prev ,.next{
-    font-size: 3rem;
-    width: 4rem;
-    padding-left: 1rem;
+  .prev ,.next{   
     border-radius: 50%;
-    cursor: pointer;
     color: black;
+    cursor: pointer;   
     font-weight: bold;
+    font-size: 3rem;
+    padding-left: 1rem;
     user-select: none;
+    width: 4rem;
   }
   .prev:hover,
   .next:hover {
-    transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.6);
+    transition: 0.5s;    
   }
   .gallery{
     display: flex;
@@ -178,9 +178,9 @@
     }
     .slider{
         width: 80%;
-    }    
+    } 
     .discription{
-        width: 40%;
+      width: 50%;
     }
     .gallery{
         width: 80%;
